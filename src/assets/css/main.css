@@ -1,0 +1,98 @@
+:root {
+  --dark: #292929;
+  --dark-hover: #242424;
+  --light: #f5f5f5;
+  --primary-color: #42c6ff;
+  --secondary-color: #ff8142;
+  --brand-font:'Noto Serif', serif;
+  --navbar-font: 'Noto Sans SC', sans-serif;
+}
+
+.material-icons {
+  font-size: 1.4rem;
+}
+
+.dvkt-va-middle {
+  vertical-align: middle;
+}
+
+.dvkt-va-top {
+  vertical-align: top;
+}
+
+.dvkt-va-bottom {
+  vertical-align: bottom;
+}
+
+.dvkt-noto-serif {
+  font-family: var(--brand-font);
+}
+
+.dvkt-noto-sans {
+  font-family: var(--navbar-font);
+}
+
+.dvkt-text-dark {
+  color: var(--dark);
+}
+
+.dvkt-text-primary {
+  color: var(--primary-color);
+}
+
+.dvkt-link-dark {
+  color: var(--dark);
+}
+
+.dvkt-link-dark:hover {
+  color: var(--dark-hover);
+}
+
+header #mainNav {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header #mainNav a.navbar-brand-dark {
+  color: var(--dark);
+}
+
+header #mainNav a.navbar-brand-light {
+  color: var(--light);
+}
+
+header #mainNav ul li a {
+  font-family: var(--navbar-font);
+  font-weight: bold;
+}
+
+header #mainNav ul li .dvkt-nav-link-dark {
+  color: var(--dark);
+}
+
+header #mainNav ul li .dvkt-nav-link-dark:hover {
+  color: var(--primary-color);
+}
+
+header #mainNav ul li .dvkt-nav-link-light {
+  color: var(--light);
+}
+
+header #mainNav ul li .dvkt-nav-link-light:hover {
+  color: var(--primary-color);
+}
+
+header #mainNav ul li .dvkt-nav-btn {
+  margin: 5px 0;
+  padding: 5px 10px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header #mainNav ul li .dvkt-nav-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--light);
+}
+/*# sourceMappingURL=main.css.map */
