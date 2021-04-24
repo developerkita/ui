@@ -111,30 +111,33 @@ header {
     #mobileNavMenu {
         z-index: 3000;
         position: fixed;
-        height: 100vh;
         transition: all .3s;
-        width: 75vw;
         margin-left: -75vw;
-        ul li {
-            a {
-                font-family: var(--navbar-font);
-                font-weight: bold;
-            }
-            .dvkt-nav-link-dark {
-                color: var(--dark);
-                &:hover{
-                    color: var(--primary-color);
+        width: 75vw;
+        height: 100vh;
+        overflow-y: scroll;
+        .mobile-nav-menu-container {
+            ul li {
+                a {
+                    font-family: var(--navbar-font);
+                    font-weight: bold;
                 }
-            }
-            .dvkt-nav-btn {
-                margin: 5px 0;
-                padding: 5px 10px;
-                border: 1px solid var(--primary-color);
-                color: var(--primary-color);
-                transition: all .2s;
-                &:hover {
-                    background-color: var(--primary-color);
-                    color: var(--dark)
+                .dvkt-nav-link-dark {
+                    color: var(--dark);
+                    &:hover{
+                        color: var(--primary-color);
+                    }
+                }
+                .dvkt-nav-btn {
+                    margin: 5px 0;
+                    padding: 5px 10px;
+                    border: 1px solid var(--primary-color);
+                    color: var(--primary-color);
+                    transition: all .2s;
+                    &:hover {
+                        background-color: var(--primary-color);
+                        color: var(--dark)
+                    }
                 }
             }
         }

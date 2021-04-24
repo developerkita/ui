@@ -23,7 +23,7 @@
         <title>developerkita</title>
     </head>
 
-    <body>
+    <body id="body">
         <header>
             <nav id="mainNav" class="d-lg-block d-none fixed-top navbar navbar-expand-lg bg-transparent py-3">
                 <div class="container">
@@ -70,53 +70,58 @@
                 </div>
             </nav>
             <nav id="mobileNav" class="d-lg-none fixed-top bg-light shadow-sm">
-                <div class="container-fluid py-3">
+                <div class="container py-3">
                     <div class="d-flex justify-content-between">
                         <div>
-                            <div class="fw-bold fs-2 dvkt-noto-serif">developer<span class="dvkt-text-primary">kita.</span></div>
+                            <div class="fw-bold fs-2 dvkt-noto-serif">developer<span
+                                    class="dvkt-text-primary">kita.</span></div>
                         </div>
                         <div>
-                            <button type="button" onclick="toggleMobileMenu()" class="btn material-icons dvkt-va-middle">menu</button>
+                            <button type="button" onclick="toggleMobileMenu()"
+                                class="btn material-icons dvkt-va-middle">menu</button>
                         </div>
                     </div>
                 </div>
             </nav>
             <div id="mobileNavMenu" class="menu-container hide d-lg-none bg-light border-end px-3">
-                <ul class="navbar-nav ms-auto">
-                    <div class="text-center py-3">
-                        <div class="fw-bold fs-2 dvkt-noto-serif">developer<span class="dvkt-text-primary">kita.</span></div>
+                <div class="text-center py-3 border-bottom">
+                    <div class="fw-bold fs-2 dvkt-noto-serif">developer<span class="dvkt-text-primary">kita.</span>
                     </div>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dvkt-nav-link-dark" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <span class="material-icons dvkt-va-bottom">
-                                language
-                            </span>
-                            EN
-                        </a>
-                        <ul class="dropdown-menu w-100">
-                            <li><a class="dropdown-item" href="#">ID (Bahasa Indonesia)</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dvkt-nav-link-dark" href="#">Explore</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dvkt-nav-link-dark" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dvkt-nav-link-dark" href="#">Developers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dvkt-nav-link-dark" href="#">How it work?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dvkt-nav-link-dark" href="#">Sign In</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dvkt-nav-btn btn btn-sm" href="#">Publish a Project</a>
-                    </li>
-                </ul>
+                </div>
+                <div class="mobile-nav-menu-container pb-3">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dvkt-nav-link-dark" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="material-icons dvkt-va-bottom">
+                                    language
+                                </span>
+                                EN
+                            </a>
+                            <ul class="dropdown-menu w-100" style="transition:all .2s;">
+                                <li><a class="dropdown-item" href="#">ID (Bahasa Indonesia)</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dvkt-nav-link-dark" href="#">Explore</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dvkt-nav-link-dark" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dvkt-nav-link-dark" href="#">Developers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dvkt-nav-link-dark" href="#">How it work?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dvkt-nav-link-dark" href="#">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dvkt-nav-btn btn btn-sm" href="#">Publish a Project</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main>
@@ -152,11 +157,11 @@
                 </div>
             </section>
             <section>
-            <section style="height: 1000px;" class="bg-light">
-                <div class="container py-lg-5">
-                    <h1>Another Section</h1>
-                </div>
-            </section>
+                <section style="height: 1000px;" class="bg-light">
+                    <div class="container py-lg-5">
+                        <h1>Another Section</h1>
+                    </div>
+                </section>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
@@ -196,11 +201,14 @@
             }
 
             function toggleMobileMenu() {
+                const body = document.getElementById('body')
                 const mobileMenu = document.getElementById('mobileNavMenu')
-                if(mobileMenu.classList.contains('show')) {
+                if (mobileMenu.classList.contains('show')) {
                     mobileMenu.classList.remove('show')
+                    body.style.overflow = 'visible'
                 } else {
                     mobileMenu.classList.add('show')
+                    body.style.overflow = 'hidden'
                 }
             }
         </script>
