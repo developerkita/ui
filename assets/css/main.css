@@ -5,8 +5,13 @@
   --primary-color: #42c6ff;
   --primary-color-hover: #00b3ff;
   --secondary-color: #ff8142;
+  --secondary-color-hover: #ff7935;
   --brand-font:'Noto Serif', serif;
   --navbar-font: 'Noto Sans SC', sans-serif;
+}
+
+body {
+  font-family: var(--navbar-font);
 }
 
 .material-icons {
