@@ -12,7 +12,8 @@
 
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif:wght@400;700&display=swap"
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif:wght@400;700&display=swap"
             rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -23,8 +24,8 @@
     </head>
 
     <body>
-        <header class="fixed-top">
-            <nav id="mainNav" class="navbar navbar-expand-lg bg-transparent py-3">
+        <header>
+            <nav id="mainNav" class="d-lg-block d-none fixed-top navbar navbar-expand-lg bg-transparent py-3">
                 <div class="container">
                     <a id="mainNavbarBrand" class="navbar-brand navbar-brand-light fw-bold fs-2 dvkt-noto-serif"
                         href="#">developer<span class="dvkt-text-primary">kita.</span></a>
@@ -35,7 +36,8 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item dropdown">
-                                <a class="nav-link main-nav-link dvkt-nav-link-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link main-nav-link dvkt-nav-link-light" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="material-icons dvkt-va-bottom">
                                         language
                                     </span>
@@ -52,31 +54,104 @@
                                 <a class="nav-link main-nav-link dvkt-nav-link-light" href="#">Features</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link main-nav-link dvkt-nav-link-light" href="#">Pricing</a>
+                                <a class="nav-link main-nav-link dvkt-nav-link-light" href="#">Developers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link main-nav-link dvkt-nav-link-light" href="#">How it work?</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link main-nav-link dvkt-nav-link-light" href="#">Sign In</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link dvkt-nav-btn btn btn-sm" href="#">Post a Project</a>
+                                <a class="nav-link dvkt-nav-btn btn btn-sm" href="#">Publish a Project</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            <nav id="mobileNav" class="d-lg-none fixed-top bg-light shadow-sm">
+                <div class="container-fluid py-3">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <div class="fw-bold fs-2 dvkt-noto-serif">developer<span class="dvkt-text-primary">kita.</span></div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="toggleMobileMenu()" class="btn material-icons dvkt-va-middle">menu</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div id="mobileNavMenu" class="menu-container hide d-lg-none bg-light border-end px-3">
+                <ul class="navbar-nav ms-auto">
+                    <div class="text-center py-3">
+                        <div class="fw-bold fs-2 dvkt-noto-serif">developer<span class="dvkt-text-primary">kita.</span></div>
+                    </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dvkt-nav-link-dark" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span class="material-icons dvkt-va-bottom">
+                                language
+                            </span>
+                            EN
+                        </a>
+                        <ul class="dropdown-menu w-100">
+                            <li><a class="dropdown-item" href="#">ID (Bahasa Indonesia)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dvkt-nav-link-dark" href="#">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dvkt-nav-link-dark" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dvkt-nav-link-dark" href="#">Developers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dvkt-nav-link-dark" href="#">How it work?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dvkt-nav-link-dark" href="#">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dvkt-nav-btn btn btn-sm" href="#">Publish a Project</a>
+                    </li>
+                </ul>
+            </div>
         </header>
         <main>
-            <section class="bg-dark">
-                <div class="py-5"></div>
-                <div class="container py-lg-5 py-3">
+            <section class="bg-dark" id="headSection">
+                <div class="pt-lg-5 pb-lg-5 pt-5 pb-3"></div>
+                <div class="container py-lg-5 py-4">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <h1 class="text-light dvkt-noto-sans">Post Project, Get Job, Get Money</h1>
-                            <h3 class="text-light dvkt-noto-sans"><em>with</em> <span class="dvkt-noto-serif">developer<span class="dvkt-text-primary">kita.</span></span></h3>
+                        <div class="col-lg-6 d-flex align-items-center">
+                            <div>
+                                <h1 class="text-light dvkt-noto-sans">Build Your Professional Developer Portofolio</h1>
+                                <h3 class="text-light dvkt-noto-sans"><em>with</em> <span
+                                        class="dvkt-noto-serif">developer<span
+                                            class="dvkt-text-primary">kita.</span></span></h3>
+                                <p class="text-muted dvkt-noto-sans">
+                                    developerkita. is a project showcase platform that displays thousands of
+                                    amazing projects by developers
+                                    in Indonesia.
+                                </p>
+                                <div class="row g-2">
+                                    <div class="col-lg-6">
+                                        <input class="form-control flat" type="email" placeholder="Email address">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <button class="btn dvkt-btn-primary" type="submit">Join developerkita.</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-lg-block d-none">
+                            <img src="./assets/img/undraw_product_tour_foyt.svg" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div>
             </section>
+            <section>
             <section style="height: 1000px;" class="bg-light">
                 <div class="container py-lg-5">
                     <h1>Another Section</h1>
@@ -117,6 +192,15 @@
                         link.classList.add('dvkt-nav-link-light')
                         link.classList.remove('dvkt-nav-link-dark')
                     }
+                }
+            }
+
+            function toggleMobileMenu() {
+                const mobileMenu = document.getElementById('mobileNavMenu')
+                if(mobileMenu.classList.contains('show')) {
+                    mobileMenu.classList.remove('show')
+                } else {
+                    mobileMenu.classList.add('show')
                 }
             }
         </script>
