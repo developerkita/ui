@@ -1,13 +1,18 @@
 :root {
-  --dark: #292929;
-  --dark-hover: #242424;
+  --dark: #464646;
+  --dark-hover: #3b3b3b;
+  --muted: #797979;
   --light: #f5f5f5;
+  --light-hover: #d6d6d6;
+  --light-gray: #f3f1f1;
   --primary-color: #42c6ff;
   --primary-color-hover: #00b3ff;
+  --primary-light-color: #42c6ff2f;
   --secondary-color: #ff8142;
   --secondary-color-hover: #ff7935;
   --brand-font:'Noto Serif', serif;
   --navbar-font: 'Noto Sans SC', sans-serif;
+  --heading-font: 'Roboto', sans-serif;
 }
 
 body {
@@ -26,6 +31,14 @@ input.flat {
 button {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+}
+
+.dvkt-light-gray {
+  background-color: var(--light-gray);
+}
+
+.dvkt-bg-primary-light {
+  background-color: var(--primary-light-color);
 }
 
 .dvkt-va-middle {
@@ -48,8 +61,16 @@ button {
   font-family: var(--navbar-font);
 }
 
+.dvkt-roboto {
+  font-family: var(--heading-font);
+}
+
 .dvkt-text-dark {
   color: var(--dark);
+}
+
+.dvkt-text-muted {
+  color: var(--muted);
 }
 
 .dvkt-text-primary {
@@ -129,10 +150,10 @@ header #mainNav ul li .dvkt-nav-btn:hover {
 header #mobileNavMenu {
   z-index: 3000;
   position: fixed;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  margin-left: -75vw;
-  width: 75vw;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  margin-left: -100vw;
+  width: 100vw;
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
