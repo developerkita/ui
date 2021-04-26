@@ -109,6 +109,19 @@ button {
     }
 }
 
+.dvkt-btn-dark {
+    background-color: var(--dark);
+    font-family: var(--navbar-font);
+    font-weight: bold;
+    color: var(--light);
+    transition: background-color .2s;
+    
+    &:hover {
+        background-color: var(--dark-hover);
+        color: var(--light);
+    }
+}
+
 header {
     #mainNav {
         transition: all .2s;

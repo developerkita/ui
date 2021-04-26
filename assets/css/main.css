@@ -111,6 +111,20 @@ button {
   color: var(--light);
 }
 
+.dvkt-btn-dark {
+  background-color: var(--dark);
+  font-family: var(--navbar-font);
+  font-weight: bold;
+  color: var(--light);
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+}
+
+.dvkt-btn-dark:hover {
+  background-color: var(--dark-hover);
+  color: var(--light);
+}
+
 header #mainNav {
   -webkit-transition: all .2s;
   transition: all .2s;
