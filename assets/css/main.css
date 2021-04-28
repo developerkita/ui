@@ -91,10 +91,12 @@ button {
 
 .dvkt-link-dark {
   color: var(--dark);
+  text-decoration: none;
 }
 
 .dvkt-link-dark:hover {
   color: var(--dark-hover);
+  text-decoration: none;
 }
 
 .dvkt-btn-primary {
