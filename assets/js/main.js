@@ -33,15 +33,11 @@ footerWidgetContents.forEach(footerWidgetContent => {
     footerWidgetContent.addEventListener('show.bs.collapse', () => {
         const expandIconId = footerWidgetContent.getAttribute('data-dvkt-expandIcon')
         const expandIcon = document.getElementById(expandIconId.replace('#', ''))
-        expandIcon.style.transition = "all .3s"
-        expandIcon.style.transform = "rotate(180deg)"
         expandIcon.innerHTML = 'remove'
     })
     footerWidgetContent.addEventListener('hide.bs.collapse', () => {
         const expandIconId = footerWidgetContent.getAttribute('data-dvkt-expandIcon')
         const expandIcon = document.getElementById(expandIconId.replace('#', ''))
-        expandIcon.style.transition = "all .3s"
-        expandIcon.style.transform = "rotate(-180deg)"
         expandIcon.innerHTML = 'add'
     })
 });

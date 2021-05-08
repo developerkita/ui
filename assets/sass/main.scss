@@ -13,8 +13,8 @@ $primary-light-color: #42c6ff2f;
 $secondary-color: #ff8142;
 $secondary-color-hover: #ff6d24;
 
-$brand-font:'Noto Serif', serif;
-$navbar-font: 'Noto Sans SC', sans-serif;
+$primary-serif-font:'Noto Serif', serif;
+$primary-sans-font: 'Noto Sans SC', sans-serif;
 $heading-font: 'Roboto', sans-serif;
 
 body {
@@ -35,7 +35,7 @@ main {
 
 .dvkt-btn-primary {
     background-color: $primary-color;
-    font-family: $navbar-font;
+    font-family: $primary-sans-font;
     font-weight: bold;
     color: $light;
     transition: background-color .2s;
@@ -48,7 +48,7 @@ main {
 
 .dvkt-btn-secondary {
     background-color: $secondary-color;
-    font-family: $navbar-font;
+    font-family: $primary-sans-font;
     font-weight: bold;
     color: $light;
     transition: background-color .2s;
@@ -61,7 +61,7 @@ main {
 
 .dvkt-btn-dark {
     background-color: $dark;
-    font-family: $navbar-font;
+    font-family: $primary-sans-font;
     font-weight: bold;
     color: $light;
     transition: background-color .2s;
@@ -103,12 +103,12 @@ main {
 
 // text style
 
-.dvkt-noto-serif {
-    font-family: $brand-font;
+.dvkt-primary-serif-font {
+    font-family: $primary-serif-font;
 }
 
-.dvkt-noto-sans {
-    font-family: $navbar-font;
+.dvkt-primary-sans-font {
+    font-family: $primary-sans-font;
 }
 
 .dvkt-roboto {
@@ -216,7 +216,7 @@ header {
         }
         ul li {
             a {
-                font-family: $navbar-font;
+                font-family: $primary-sans-font;
                 font-weight: bold;
             }
             .dvkt-nav-link-dark {
@@ -246,8 +246,12 @@ header {
         }
     }
     #mobileNavMenu {
-        z-index: 3000;
+        z-index: 3001;
         position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
         transition: all .25s;
         margin-left: -100vw;
         width: 100vw;
@@ -257,12 +261,18 @@ header {
         .mobile-nav-menu-container {
             ul li {
                 a {
-                    font-family: $navbar-font;
+                    font-family: $primary-sans-font;
                     font-weight: bold;
                 }
                 .dvkt-nav-link-dark {
                     color: $dark;
                     &:hover{
+                        color: $primary-color;
+                    }
+                }
+                .dvkt-nav-link-light {
+                    color: $light;
+                    &:hover {
                         color: $primary-color;
                     }
                 }

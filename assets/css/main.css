@@ -91,11 +91,11 @@ main {
   text-decoration: none;
 }
 
-.dvkt-noto-serif {
+.dvkt-primary-serif-font {
   font-family: "Noto Serif", serif;
 }
 
-.dvkt-noto-sans {
+.dvkt-primary-sans-font {
   font-family: "Noto Sans SC", sans-serif;
 }
 
@@ -242,8 +242,12 @@ header #mainNav ul li .dvkt-nav-btn:hover {
 }
 
 header #mobileNavMenu {
-  z-index: 3000;
+  z-index: 3001;
   position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   -webkit-transition: all .25s;
   transition: all .25s;
   margin-left: -100vw;
@@ -263,6 +267,14 @@ header #mobileNavMenu .mobile-nav-menu-container ul li .dvkt-nav-link-dark {
 }
 
 header #mobileNavMenu .mobile-nav-menu-container ul li .dvkt-nav-link-dark:hover {
+  color: #42c6ff;
+}
+
+header #mobileNavMenu .mobile-nav-menu-container ul li .dvkt-nav-link-light {
+  color: #f5f5f5;
+}
+
+header #mobileNavMenu .mobile-nav-menu-container ul li .dvkt-nav-link-light:hover {
   color: #42c6ff;
 }
 
